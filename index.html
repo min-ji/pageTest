@@ -23,19 +23,19 @@
         console.log(metaProperty[i]);
         if(typeof metaProperty[i] == "string"){
           if(metaProperty[i].indexOf('url')>=0){
-            metaProperty[i] = 'og:urll2';
+            metaProperty[i] = 'og:urll';
           }else if(metaProperty[i].indexOf('title')>=0){
-            metaProperty[i] = 'og:titlel2';
+            metaProperty[i] = 'og:titlel';
           }else if(metaProperty[i].indexOf('description')>=0){
-            metaProperty[i] = 'og:descriptions2';
+            metaProperty[i] = 'og:descriptions';
           }else if(metaProperty[i].indexOf('image')>=0){
-            metaProperty[i] = 'og:images2';
+            metaProperty[i] = 'og:images';
           }else if(metaProperty[i].indexOf('type')>=0){
-            metaProperty[i] = 'og:types2';
+            metaProperty[i] = 'og:types';
           }else if(metaProperty[i].indexOf('site_name')>=0){
-            metaProperty[i] = 'og:site_names2';
+            metaProperty[i] = 'og:site_names';
           }else if(metaProperty[i].indexOf('locale')>=0){
-            metaProperty[i] = 'og:locales2';
+            metaProperty[i] = 'og:locales';
           }
         }
         if(metaProperty[i] !=null){
