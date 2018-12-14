@@ -12,34 +12,11 @@
 
 
   <script>
-    function snsModify(){
-      console.log(1);
-      var meta = new Array();
-      var metaProperty = new Array();
-      var meta = document.getElementsByTagName("meta");
-
-      for(i=0;i<meta.length;i++){
-        metaProperty[i] = meta[i].getAttribute('property');
-        console.log(metaProperty[i]);
-        if(typeof metaProperty[i] == "string"){
-          if(metaProperty[i].indexOf('title')>=0){
-            metaProperty[i] = 'og:title';
-          }
-        }
-        if(metaProperty[i] !=null){
-          console.log(metaProperty[i]);
-          meta[i].setAttribute('property', metaProperty[i]);
-          if(metaProperty[i].indexOf('title')>=0){
-            meta[i].setAttribute('content', 'aaa');
-          }
-        }
-      }
-    };
-    snsModify()
+    $("meta[property=og:title]").attr("content", 'aaa');
   </script>
 </head>
 <body>
-github pages test222
+github pages test333
 
 
 </body>
