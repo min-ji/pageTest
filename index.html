@@ -22,74 +22,16 @@
         metaProperty[i] = meta[i].getAttribute('property');
         console.log(metaProperty[i]);
         if(typeof metaProperty[i] == "string"){
-          if(metaProperty[i].indexOf('url')>=0){
-            metaProperty[i] = 'og:urll';
-          }else if(metaProperty[i].inde<!doctype html>
-          <html lang="ko">
-            <head>
-            <meta charset="UTF-8">
-            <title>test</title>
-            <meta property="og:url" content="https://www.daum.net/">
-            <meta property="og:type" content="website">
-            <meta property="og:title" content="Daum">
-            <meta property="og:image" content="//i1.daumcdn.net/svc/image/U03/common_icon/5587C4E4012FCD0001">
-            <meta property="og:description" content="나의 관심 콘텐츠를 가장 즐겁게 볼 수 있는 Daum">
-
-
-
-            <script>
-            function snsModify(){
-              console.log(1);
-              var meta = new Array();
-              var metaProperty = new Array();
-              var meta = document.getElementsByTagName("meta");
-
-              for(i=0;i<meta.length;i++){
-                metaProperty[i] = meta[i].getAttribute('property');
-                console.log(metaProperty[i]);
-                if(typeof metaProperty[i] == "string"){
-                  if(metaProperty[i].indexOf('url')>=0){
-                    metaProperty[i] = 'og:url';
-                  }else if(metaProperty[i].indexOf('title')>=0){
-                    metaProperty[i] = 'og:title';
-                  }else if(metaProperty[i].indexOf('description')>=0){
-                    metaProperty[i] = 'og:description';
-                  }
-                }
-                if(metaProperty[i] !=null){
-                  console.log(metaProperty[i]);
-                  meta[i].setAttribute('property', metaProperty[i]);
-                  meta[i].setAttribute('content', 'a');
-                }
-              }
-            };
-          snsModify()
-  </script>
-</head>
-<body>
-github pages test222
-
-
-</body>
-</html>
-xOf('title')>=0){
-            metaProperty[i] = 'og:titlel';
-          }else if(metaProperty[i].indexOf('description')>=0){
-            metaProperty[i] = 'og:descriptions';
-          }else if(metaProperty[i].indexOf('image')>=0){
-            metaProperty[i] = 'og:images';
-          }else if(metaProperty[i].indexOf('type')>=0){
-            metaProperty[i] = 'og:types';
-          }else if(metaProperty[i].indexOf('site_name')>=0){
-            metaProperty[i] = 'og:site_names';
-          }else if(metaProperty[i].indexOf('locale')>=0){
-            metaProperty[i] = 'og:locales';
+          if(metaProperty[i].indexOf('title')>=0){
+            metaProperty[i] = 'og:title';
           }
         }
         if(metaProperty[i] !=null){
           console.log(metaProperty[i]);
           meta[i].setAttribute('property', metaProperty[i]);
-          meta[i].setAttribute('content', 'a');
+          if(metaProperty[i].indexOf('title')>=0){
+            meta[i].setAttribute('content', 'aaa');
+          }
         }
       }
     };
